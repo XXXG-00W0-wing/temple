@@ -420,9 +420,70 @@
             font-size: 1rem;
         }
         .close-modal-btn:hover { background: #555; }
+
+        /* RWD */
+        .mobile-header {
+            display: none;
+            background: rgba(15, 15, 17, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 1.5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 101;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        .mobile-header-title {
+            color: var(--primary);
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .menu-toggle {
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+        }
+        nav.sidebar {
+            transition: transform 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            .mobile-header { display: flex; }
+            nav.sidebar {
+                transform: translateX(-100%);
+                padding-top: 5rem;
+            }
+            nav.sidebar.open {
+                transform: translateX(0);
+            }
+            main {
+                margin-left: 0;
+                height: calc(100vh - 60px);
+                margin-top: 60px;
+            }
+            #home h1 { font-size: 2.5rem; }
+            #home p { font-size: 1.2rem; }
+            section { padding: 3rem 1rem; }
+            .glass-card { padding: 1.5rem; }
+            .quiz-options { grid-template-columns: 1fr; }
+            .blocks-container { gap: 20px; }
+            .embed-container iframe { width: 100% !important; }
+        }
     </style>
 </head>
 <body>
+
+    <div class="mobile-header">
+        <h1 class="mobile-header-title">淡水助順將軍廟</h1>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
 
     <nav class="sidebar">
         <div class="sidebar-title">淡水助順將軍廟</div>
@@ -568,6 +629,20 @@
         const sections = document.querySelectorAll('main section');
         const navLinks = document.querySelectorAll('.sidebar a');
         const main = document.querySelector('main');
+        const sidebar = document.querySelector('.sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        navLinks.forEach(a => {
+            a.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('open');
+                }
+            });
+        });
 
         main.addEventListener('scroll', () => {
             let current = '';
