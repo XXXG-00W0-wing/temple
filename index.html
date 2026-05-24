@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>淡水助順將軍廟</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
-            --primary: #d4af37; /* Gold */
+            --primary: #d4af37;
+            /* Gold */
             --bg-dark: #0f0f11;
             --glass-bg: rgba(30, 30, 35, 0.6);
             --glass-border: rgba(255, 255, 255, 0.08);
@@ -22,7 +26,7 @@
             font-family: 'Noto Sans TC', sans-serif;
             background-color: var(--bg-dark);
             color: var(--text-light);
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(138, 28, 19, 0.15), transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.1), transparent 25%);
             background-attachment: fixed;
@@ -30,8 +34,10 @@
             min-height: 100vh;
         }
 
-        h1, h2, h3 {
-            font-family: 'Noto Serif TC', serif; 
+        h1,
+        h2,
+        h3 {
+            font-family: 'Noto Serif TC', serif;
             color: var(--primary);
         }
 
@@ -81,7 +87,8 @@
             border-left: 3px solid transparent;
         }
 
-        .sidebar a:hover, .sidebar a.active {
+        .sidebar a:hover,
+        .sidebar a.active {
             background: rgba(212, 175, 55, 0.1);
             color: var(--primary);
             border-left: 3px solid var(--primary);
@@ -105,7 +112,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .container {
@@ -128,11 +135,11 @@
         /* Home Section */
         #home {
             position: relative;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('temple.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('temple.jpg') center/cover no-repeat;
             /* Placeholder styling if temple.jpg is missing */
             background-color: #1a0f0f;
         }
-        
+
         #home h1 {
             font-size: 4rem;
             letter-spacing: 5px;
@@ -170,7 +177,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             padding: 1rem;
             box-sizing: border-box;
         }
@@ -178,7 +185,8 @@
         .embed-container iframe {
             border-radius: 8px;
             max-width: 100%;
-            background: white; /* FB needs white background to not look glitched if transparent */
+            background: white;
+            /* FB needs white background to not look glitched if transparent */
         }
 
         .fb-fallback {
@@ -190,6 +198,7 @@
             text-align: center;
             color: #ccc;
         }
+
         .fb-fallback a {
             color: #1877F2;
             text-decoration: none;
@@ -286,7 +295,7 @@
             width: 70px;
             height: 140px;
             display: inline-block;
-            box-shadow: 3px 6px 15px rgba(0,0,0,0.6);
+            box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.6);
         }
 
         .block.flat {
@@ -297,29 +306,50 @@
         .block.curved {
             border-radius: 140px 0 0 140px;
             background: linear-gradient(to right, #8b0000, #4a0000);
-            box-shadow: inset -8px 0 15px rgba(0,0,0,0.6), 3px 6px 15px rgba(0,0,0,0.6);
+            box-shadow: inset -8px 0 15px rgba(0, 0, 0, 0.6), 3px 6px 15px rgba(0, 0, 0, 0.6);
         }
 
         .block.curved.right {
             border-radius: 0 140px 140px 0;
             background: linear-gradient(to left, #8b0000, #4a0000);
-            box-shadow: inset 8px 0 15px rgba(0,0,0,0.6), 3px 6px 15px rgba(0,0,0,0.6);
+            box-shadow: inset 8px 0 15px rgba(0, 0, 0, 0.6), 3px 6px 15px rgba(0, 0, 0, 0.6);
         }
 
         @keyframes toss1 {
-            0% { transform: translateY(0) rotate(0deg) scale(1); }
-            50% { transform: translateY(-120px) rotate(360deg) scale(1.1); }
-            100% { transform: translateY(0) rotate(720deg) scale(1); }
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: translateY(-120px) rotate(360deg) scale(1.1);
+            }
+
+            100% {
+                transform: translateY(0) rotate(720deg) scale(1);
+            }
         }
 
         @keyframes toss2 {
-            0% { transform: translateY(0) rotate(0deg) scale(1); }
-            50% { transform: translateY(-120px) rotate(-360deg) scale(1.1); }
-            100% { transform: translateY(0) rotate(-720deg) scale(1); }
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: translateY(-120px) rotate(-360deg) scale(1.1);
+            }
+
+            100% {
+                transform: translateY(0) rotate(-720deg) scale(1);
+            }
         }
 
-        .animating #block1 { animation: toss1 1s cubic-bezier(0.2, 0.8, 0.4, 1); }
-        .animating #block2 { animation: toss2 1s cubic-bezier(0.2, 0.8, 0.4, 1); }
+        .animating #block1 {
+            animation: toss1 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+        }
+
+        .animating #block2 {
+            animation: toss2 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+        }
 
         .toss-btn {
             background: linear-gradient(135deg, #d4af37, #aa8222);
@@ -341,9 +371,16 @@
             transform: scale(1.05);
             background: linear-gradient(135deg, #f1ce56, #c49929);
         }
-        
-        .toss-btn:active { transform: scale(0.95); }
-        .toss-btn:disabled { background: #555; color: #888; cursor: not-allowed; }
+
+        .toss-btn:active {
+            transform: scale(0.95);
+        }
+
+        .toss-btn:disabled {
+            background: #555;
+            color: #888;
+            cursor: not-allowed;
+        }
 
         .result-text {
             margin-top: 2rem;
@@ -365,17 +402,23 @@
             transition: opacity 0.5s ease;
         }
 
-        .show-result { opacity: 1; }
+        .show-result {
+            opacity: 1;
+        }
+
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
             margin: 2rem 0;
         }
-        
+
         /* Modal Styles */
         .modal-overlay {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(5px);
             z-index: 1000;
@@ -386,10 +429,12 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
+
         .modal-overlay.active {
             opacity: 1;
             pointer-events: auto;
         }
+
         .modal-content {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
@@ -397,18 +442,21 @@
             border-radius: 20px;
             text-align: center;
             max-width: 450px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
             transform: translateY(20px);
             transition: transform 0.3s ease;
         }
+
         .modal-overlay.active .modal-content {
             transform: translateY(0);
         }
+
         .modal-content img {
             max-width: 100%;
             border-radius: 10px;
             margin: 1.5rem 0;
         }
+
         .close-modal-btn {
             background: #444;
             color: #fff;
@@ -419,7 +467,10 @@
             margin-top: 10px;
             font-size: 1rem;
         }
-        .close-modal-btn:hover { background: #555; }
+
+        .close-modal-btn:hover {
+            background: #555;
+        }
 
         /* RWD */
         .mobile-header {
@@ -437,12 +488,14 @@
             justify-content: space-between;
             box-sizing: border-box;
         }
+
         .mobile-header-title {
             color: var(--primary);
             font-family: 'Noto Serif TC', serif;
             font-size: 1.2rem;
             margin: 0;
         }
+
         .menu-toggle {
             background: transparent;
             border: none;
@@ -451,33 +504,62 @@
             cursor: pointer;
             padding: 0;
         }
+
         nav.sidebar {
             transition: transform 0.3s ease;
         }
+
         @media (max-width: 768px) {
-            .mobile-header { display: flex; }
+            .mobile-header {
+                display: flex;
+            }
+
             nav.sidebar {
                 transform: translateX(-100%);
                 padding-top: 5rem;
             }
+
             nav.sidebar.open {
                 transform: translateX(0);
             }
+
             main {
                 margin-left: 0;
                 height: calc(100vh - 60px);
                 margin-top: 60px;
             }
-            #home h1 { font-size: 2.5rem; }
-            #home p { font-size: 1.2rem; }
-            section { padding: 3rem 1rem; }
-            .glass-card { padding: 1.5rem; }
-            .quiz-options { grid-template-columns: 1fr; }
-            .blocks-container { gap: 20px; }
-            .embed-container iframe { width: 100% !important; }
+
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            #home p {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .glass-card {
+                padding: 1.5rem;
+            }
+
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+
+            .blocks-container {
+                gap: 20px;
+            }
+
+            .embed-container iframe {
+                width: 100% !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="mobile-header">
@@ -504,7 +586,7 @@
             <h1>淡水助順將軍廟</h1>
             <p>南明儒將・在地守護</p>
             <div class="image-placeholder-hint">
-               
+
             </div>
         </section>
 
@@ -515,8 +597,10 @@
                     <h2>歷史沿革</h2>
                     <div class="divider"></div>
                     <div class="info-content">
-                        <p>淡水老街助順將軍廟，又稱黃府將軍廟，原名淡水晉德宮。與艋舺晉德宮同樣，是台灣少數供奉明朝殉國儒將黃道周（1585-1646）的功國偉人廟宇。於清季由福建泉州移民建廟，庇佑淡水街民，早期常為挑運工的休息場所。</p>
-                        <p>從殿內「海崖澤被」匾額落款光緒癸巳年冬（1893年）估計，立廟已超過一百二十六年。前後經歷多次修護，首度於民國五十年由老街耆老黃氏召集翻修。再來，由前長庚里長張忠義於民國七十年召集里民整修，且於七十二年登記合法。今年（2017），再由當任爐主張嘉霖道長號召修復。</p>
+                        <p>淡水老街助順將軍廟，又稱黃府將軍廟，原名淡水晉德宮。與艋舺晉德宮同樣，是台灣少數供奉明朝殉國儒將黃道周（1585-1646）的功國偉人廟宇。於清季由福建泉州移民建廟，庇佑淡水街民，早期常為挑運工的休息場所。
+                        </p>
+                        <p>從殿內「海崖澤被」匾額落款光緒癸巳年冬（1893年）估計，立廟已超過一百二十六年。前後經歷多次修護，首度於民國五十年由老街耆老黃氏召集翻修。再來，由前長庚里長張忠義於民國七十年召集里民整修，且於七十二年登記合法。今年（2017），再由當任爐主張嘉霖道長號召修復。
+                        </p>
                         <p>助順將軍的根源有幾個說法，最早傳說是明朝末年抗清的黃氏三兄弟（黃孝、黃忠、黃義）。但信眾與執事普遍選擇相信祂是南明抗清大儒黃道周。</p>
                     </div>
                 </div>
@@ -530,7 +614,7 @@
                     <h2>模擬小測驗</h2>
                     <p style="color: var(--text-muted)">內容擷取自《重修淡水助順將軍廟碑記》，來測試您對將軍廟的了解吧！</p>
                     <div class="divider"></div>
-                    
+
                     <div class="quiz-container">
                         <div id="quizQuestion" class="quiz-question">讀取中...</div>
                         <div id="quizOptions" class="quiz-options"></div>
@@ -548,7 +632,7 @@
                     <h2 style="text-align: center;">線上擲筊結緣</h2>
                     <div class="divider"></div>
                     <p style="color: var(--text-muted); text-align: center;">誠心默念您的姓名、出生年月日、地址與所求之事，點擊按鈕擲筊。</p>
-                    
+
                     <div class="blocks-container" id="blocksContainer">
                         <div class="block flat" id="block1"></div>
                         <div class="block curved right" id="block2"></div>
@@ -558,6 +642,7 @@
 
                     <div id="resultText" class="result-text"></div>
                     <div id="resultDesc" class="result-desc"></div>
+                    <div id="shengJiaoCount" style="text-align: center; margin-top: 15px; font-size: 1.2rem; color: #f1ce56; font-weight: bold; opacity: 0; transition: opacity 0.5s ease;">累積聖筊：0 / 3</div>
                 </div>
             </div>
         </section>
@@ -568,10 +653,20 @@
                 <div class="glass-card">
                     <h2 style="text-align: center;">文創商品</h2>
                     <div class="divider"></div>
-                    <div style="text-align: center;">
-                        <img src="gift.png" alt="文創商品" style="max-width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
-                        <p style="margin-top: 1.5rem; font-size: 1.1rem;">精美將軍廟文創周邊，保佑平安順心。</p>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="gift.png" alt="文創商品"
+                            style="max-width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
                     </div>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+                        <img src="hat.png" alt="將軍帽"
+                            style="max-width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                        <img src="bag.png" alt="平安帆布袋"
+                            style="max-width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center;">
+                        將傳統的「助順將軍」信仰文字與幾何化的「軍」字徽章完美融合，打造出具備現代潮流與神明庇佑的簡約文創風格。精美將軍廟文創周邊，保佑平安順心。(數量有限，售完為止)
+                    </p>
                 </div>
             </div>
         </section>
@@ -584,12 +679,17 @@
                     <div class="divider"></div>
                     <div class="embed-container">
                         <!-- Facebook Post iframe -->
-                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D574825711499743%26set%3Da.628388906165948%26type%3D3&show_text=true&width=500" width="500" height="645" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        
+                        <iframe
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D574825711499743%26set%3Da.628388906165948%26type%3D3&show_text=true&width=500"
+                            width="500" height="645" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
                         <div class="fb-fallback">
-                           
-                            
-                            <a href="https://www.facebook.com/people/%E6%B7%A1%E6%B0%B4%E5%8A%A9%E9%A0%86%E5%B0%87%E8%BB%8D%E7%88%BA%E5%BB%9F/100069845331300/" target="_blank">👉 點此直接前往官方 Facebook 頁面 👈</a>
+
+
+                            <a href="https://www.facebook.com/people/%E6%B7%A1%E6%B0%B4%E5%8A%A9%E9%A0%86%E5%B0%87%E8%BB%8D%E7%88%BA%E5%BB%9F/100069845331300/"
+                                target="_blank">👉 點此直接前往官方 Facebook 頁面 👈</a>
                         </div>
                     </div>
                 </div>
@@ -603,7 +703,9 @@
                     <h2>地理位置</h2>
                     <div class="divider"></div>
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.4204783623846!2d121.44213895079042!3d25.16972560995967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5584d460bf1%3A0x9d5cdf8abfdd2ae8!2z5b6M6KGX5LuU5pmJ5b635a6u5Yqp6aCG5bCH6LuN!5e0!3m2!1szh-TW!2stw!4v1779245606384!5m2!1szh-TW!2stw" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.4204783623846!2d121.44213895079042!3d25.16972560995967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5584d460bf1%3A0x9d5cdf8abfdd2ae8!2z5b6M6KGX5LuU5pmJ5b635a6u5Yqp6aCG5bCH6LuN!5e0!3m2!1szh-TW!2stw!4v1779245606384!5m2!1szh-TW!2stw"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -617,9 +719,22 @@
             <p>您已全部答對歷史測驗，這是您的專屬文創商品折價券：</p>
             <img src="coupang.png" alt="折價券">
             <div>
-                <a href="#merch" class="toss-btn" style="text-decoration: none; display: inline-block; margin: 10px;" onclick="closeModal()">前往文創商品</a>
+                <a href="#merch" class="toss-btn" style="text-decoration: none; display: inline-block; margin: 10px;"
+                    onclick="closeModal()">前往文創商品</a>
                 <br>
                 <button class="close-modal-btn" onclick="closeModal()">關閉</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pen Modal -->
+    <div class="modal-overlay" id="penModal">
+        <div class="modal-content">
+            <h2 style="color: #f1ce56;">神明賜福！</h2>
+            <p>恭喜您誠心擲筊達三次，獲得專屬文創紀念筆：</p>
+            <img src="pen.png" alt="紀念筆" style="max-width: 100%; border-radius: 10px; margin: 1.5rem 0;">
+            <div>
+                <button class="close-modal-btn" onclick="document.getElementById('penModal').classList.remove('active')">確認領取</button>
             </div>
         </div>
     </div>
@@ -697,10 +812,10 @@
             resultEl.innerText = '';
             nextBtn.style.display = 'none';
             optionsEl.innerHTML = '';
-            
+
             const q = quizData[currentQuestion];
             questionEl.innerText = `第 ${currentQuestion + 1}/${quizData.length} 題：${q.q}`;
-            
+
             q.options.forEach((opt, index) => {
                 const btn = document.createElement('button');
                 btn.className = 'quiz-btn';
@@ -765,9 +880,11 @@
         const block2 = document.getElementById('block2');
         const resultText = document.getElementById('resultText');
         const resultDesc = document.getElementById('resultDesc');
+        const shengJiaoCountEl = document.getElementById('shengJiaoCount');
+        let tossCount = 0;
 
         function updateBlock(el, isFlat, isRight) {
-            el.className = 'block'; 
+            el.className = 'block';
             if (isFlat) {
                 el.classList.add('flat');
             } else {
@@ -782,8 +899,8 @@
             bwaBtn.disabled = true;
             bwaBtn.innerText = '擲筊中...';
 
-            updateBlock(block1, true, false); 
-            updateBlock(block2, true, true);  
+            updateBlock(block1, true, false);
+            updateBlock(block2, true, true);
 
             container.classList.remove('animating');
             void container.offsetWidth;
@@ -818,12 +935,26 @@
 
                 resultText.classList.add('show-result');
                 resultDesc.classList.add('show-result');
+                shengJiaoCountEl.style.opacity = '1';
 
                 bwaBtn.disabled = false;
                 bwaBtn.innerText = '再次擲筊';
 
-            }, 1000); 
+                if (b1 !== b2) {
+                    tossCount++;
+                    shengJiaoCountEl.innerText = `累積聖筊：${tossCount} / 3`;
+                    if (tossCount >= 3) {
+                        setTimeout(() => {
+                            document.getElementById('penModal').classList.add('active');
+                            tossCount = 0;
+                            shengJiaoCountEl.innerText = `累積聖筊：0 / 3`;
+                        }, 500);
+                    }
+                }
+
+            }, 1000);
         });
     </script>
 </body>
+
 </html>
